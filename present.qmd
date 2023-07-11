@@ -208,8 +208,16 @@ knitr:
 
   - Observational analyses / target trial emulation
   - Generalisability/transportability using trial and observational data
+  
+## {background-color="#471337"}
 
-## [Check the]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483"} Identifiability conditions 
+
+<p style="margin:700px;"></p>
+
+[Generalisability/transportability analyses]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
+
+
+## [Check the]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} Identifiability conditions 
 
 ::: {style="position: absolute; left: 330px; top: 150px; height: 250px; width: 1100px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 7px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
 
@@ -229,6 +237,8 @@ knitr:
 [Internal Validity]{style="font-size: 30px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"} 
 
 :::
+
+. . .
 
 ::: {style="position: absolute; left: 330px; top: 500px; height: 250px; width: 1100px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 7px 0px #fab724; border-radius: 5px; border:0.2px solid #D9D9D9"}
 [(IV) Conditional exchangeability for study selection* ]{style="font-size: 30px; font-weight: bold; line-height: 1em; margin: 0px; color: #D69E02"}
@@ -253,6 +263,203 @@ knitr:
 [External Validity]{style="font-size: 30px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"} 
 
 :::
+
+## How should the _target population_ be selected?
+ \
+ 
+Based on the research question. 
+
+However, it might be limited by the available source of target population data  
+
+ - _Characteristics of the individuals_
+ - _How variable measurements were ascertained (compared to RCT)_
+
+::: {.callout-tip title="Example"}
+## Example
+ - Patients need to fulfil inclusion/exclusion criteria*
+
+ - Have measurements of relevant effect modifiers identified
+:::
+
+## Require patient-data level
+
+\ 
+ 
+> [Trial population:]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"}  covariates, exposure, outcome
+
+\
+
+> [Target population:]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"}  covariates, outcome*
+
+\ 
+
+Include as many potential [effect modifiers]{style="font-size: 45px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} as possible
+
+   - matter-knowledge 
+   - subgroups analysis 
+   - Previous evidence
+
+## Estimation of _average treatment effect_ in the target population
+
+\
+
+> [Inverse probability (IP) weighting]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} estimators that rely on modelling the probability of  participation in the trial
+
+\
+
+. . .
+
+> [Outcome model-based]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} estimators that rely on modelling the expectation of the outcome
+
+\ 
+
+. . .
+
+> [Augmented IP weighting]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} estimators that rely on modelling both the expectation of the outcome and the probability of participation in the trial. 
+
+## {background-color="#471337"}
+
+
+<p style="margin:700px;"></p>
+
+[Inverse probability weighting estimators]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
+
+## Inverse probability weighting estimators
+
+::: {style="position: absolute; left: 20px; top: 200px; height: 380px; width: 420px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 10px 0px #fab724; border-radius: 5px; border:0.2px solid #D9D9D9"}
+IPW estimators model the [probability of participation in the trial]{style="font-size: 40px; font-weight: bold; line-height: 1em; margin: 0px; color: #D69E02"}  (sampling) using participant characteristics, similar to the propensity score 
+:::
+
+::: {style="position: absolute; left: 560px; top: 200px; height: 380px; width: 420px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 10px 0px #fb92a4; border-radius: 5px; border:0.2px solid #D9D9D9"}
+Trial  population is used to create a [new target population]{style="font-size: 40px; font-weight: bold; line-height: 1em; margin: 0px; color: #B84C65"} (re-weighted trial participants) with the same distribution of the target population
+:::
+
+::: {style="position: absolute; left: 1100px; top: 200px; height: 380px; width: 420px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 7px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
+It can be done using Logistic regression or machine learning methods
+Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; margin: 0px; color: #9B4EBB"} of the weighted trial population in the analysis
+:::
+
+
+
+## It looks like
+
+<br>
+
+```{mermaid}
+%%| fig-width: 10
+%%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "10px"}}}%%
+        graph LR
+          A[Target population] -->|Covariates| C(Model)
+          B[Trial population] -->|Covariates <br>outcome <br> treatment| C(Model)
+          C --> D[Re-weighted <br> trial population]
+          
+
+```
+
+
+## {background-color="#471337"}
+
+
+<p style="margin:700px;"></p>
+
+[Outcome-model based estimators]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
+
+## [Outcome-model based estimators]{style="font-size: 67px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"}
+
+\
+
+ - Use trial data to build a prediction model.
+ - Recommended building one model for [each arm]{style="font-size: 43px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} to better capture effect modification over baseline covariates 
+ - Check the model specification
+ 
+\
+
+. . .
+
+::: {.callout-tip title="Example"}
+## Benefit over IPW estimators
+the model can be applied to a new target population without re-weighting each time
+:::
+
+## It looks like {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: columns
+::: {.column width="45%"}
+<br>
+
+::: {.r-vstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #c39bd3; width: 300px; height: 250px; margin: 10px;border-radius: 30px;"}
+
+\
+
+[Target]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 90px;"}
+[Population]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 65px;"}
+
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #344c5c; width: 250px; height: 180px ;margin-right:10px; border-radius: 70px"}
+[Trial]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 90px;"}
+[Population]{style="font-size: 30px; font-weight: bold; color: #ffffff; padding-left: 55px;"}
+:::
+:::
+:::
+::: {.column width="45%"}
+
+::: {style="position: absolute; left: 500px; top: 180px; height: 200px; width: 300px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 0px 0px #4a235a; border-radius: 5px; border:0.2px solid #878489"}
+[Variables]{style="font-size: 25px; font-weight: bold; color: #c39bd3; padding-left: 90px;"}
+:::
+
+::: {style="position: absolute; left: 500px; top: 430px; height: 150px; width: 300px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 0px 0px #4a235a; border-radius: 5px; border:0.2px solid #878489"}
+Variables
+:::
+:::
+:::
+
+
+
+## dd
+```{mermaid}
+%%| fig-width: 3.5
+%%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "5px"}}}%%
+        graph TD
+          A[target population] -->|Get money| B(Go shopping)
+          B --> C{target population}
+          B --> G[/Another/]
+          C ==>|One| D[Laptop]
+          C -->|Two| E[iPhone]
+          C -->|Three| F[fa:fa-car Car]
+          subgraph section
+            C
+            D
+            E
+            F
+            G
+          end
+```
+## It looks like {auto-animate=true auto-animate-easing="ease-in-out"}
+
+<br><br>
+
+::: {.r-stack}
+
+::: {data-id="box2" style="background: #344c5c; width: 250px; height: 180px; border-radius: 70px;"}
+
+\ 
+
+[Target]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 90px;"}
+[Population]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 65px;"}
+:::
+
+::: {data-id="box1" style="background: #c39bd3; width: 250px; height: 180px; border-radius: 70px;"}
+[Re-weighted]{style="font-size: 30px; font-weight: bold; color: #540C72; padding-left: 40px;"}
+[Trial]{style="font-size: 35px; font-weight: bold; color: #540C72; padding-left: 95px;"}
+[Population]{style="font-size: 35px; font-weight: bold; color: #540C72; padding-left: 45px;"}
+
+:::
+
+:::
+
+
 
 ## Traget population - Trial population
 
