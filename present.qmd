@@ -334,7 +334,7 @@ Trial  population is used to create a [new target population]{style="font-size: 
 
 ::: {style="position: absolute; left: 1100px; top: 200px; height: 380px; width: 420px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 7px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
 It can be done using Logistic regression or machine learning methods
-Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; margin: 0px; color: #9B4EBB"} of the weighted trial population in the analysis
+Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; margin: 0px; color: #9B4EBB"} of the weighted trial population in the analysis.
 :::
 
 
