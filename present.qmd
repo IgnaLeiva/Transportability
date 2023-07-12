@@ -339,20 +339,24 @@ Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; m
 
 
 
+
 ## It looks like
 
 <br>
 
 ```{mermaid}
-%%| fig-width: 10
+%%| fig-width: 15
 %%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "10px"}}}%%
         graph LR
-          A[Target population] -->|Covariates| C(Model)
-          B[Trial population] -->|Covariates <br>outcome <br> treatment| C(Model)
-          C --> D[Re-weighted <br> trial population]
+          A["Target Population #32;"] -->|"Covariates #32;"| C["Model #32;"]
+          B["Trial Population #32;"] -->|"Covariates <br> outcome <br> treatment #32;" <br>.| C["Model #32;"]
+          C --> D["Re-weighted <br> trial population #32;" <br>.]
           
 
 ```
+
+
+
 
 
 ## {background-color="#471337"}
@@ -428,15 +432,15 @@ To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among p
 <br>
 
 ```{mermaid}
-%%| fig-width: 10
-%%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "10px"}}}%%
+%%| fig-width: 15
+%%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "15px"}}}%%
         graph LR
-          A[Target population] --> B(Warfarin Model)
-          A[Trial population] --> C(Dabigatran Model)
-          C --> D[Risk Dabigatran]
-          B --> E[Risk Warfarin]
-          D --> F[RD or RR]
-          E --> F
+          A["Target population #32;" <br><br>.] --> B("Warfarin Model #32;")
+          A["Trial population #32;"] --> C("Dabigatran Model #32;")
+          C --> D["Risk Dabigatran #32;"]
+          B --> E["Risk Warfarin #32;"]
+          D --> F["RD or RR #32;"]
+          E --> F["RD or RR #32;"]
 
 ```
 
