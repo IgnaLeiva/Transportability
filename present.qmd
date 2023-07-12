@@ -30,13 +30,11 @@ knitr:
 :::
 
 
-## Table of Content {background-color="#581845"}
- - Background
- - Generalisability
- - Transportabilty
- - Example using:
-    - Inverse probability of sampling (or selection) weighting (IPSW) 
-    - Outcome model-risk prediction
+## {background-color="#581845"}
+
+<p style="margin:700px;"></p>
+
+[Background]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
     
 ## [Randomised Controlled Trials]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"}
 
@@ -271,7 +269,7 @@ Based on the research question.
 
 However, it might be limited by the available source of target population data  
 
- - _Characteristics of the individuals_
+ - _Characteristics of the individuals (especially EM)_ 
  - _How variable measurements were ascertained (compared to RCT)_
 
 ::: {.callout-tip title="Example"}
@@ -380,100 +378,139 @@ Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; m
 ## Benefit over IPW estimators
 the model can be applied to a new target population without re-weighting each time
 :::
+## {}
 
-## It looks like {auto-animate=true auto-animate-easing="ease-in-out"}
+![](Shin/title.tiff){width="950" height="420" fig-align="center"}
 
-::: columns
-::: {.column width="45%"}
 <br>
 
-::: {.r-vstack}
-::: {data-id="box1" auto-animate-delay="0" style="background: #c39bd3; width: 300px; height: 250px; margin: 10px;border-radius: 30px;"}
+::: {.callout-important}
 
-\
+## Aim
 
-[Target]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 90px;"}
-[Population]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 65px;"}
-
+To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among patient patients with atrial Fibrillation in US Medicare beneficiaries 
 :::
 
-::: {data-id="box2" auto-animate-delay="0.1" style="background: #344c5c; width: 250px; height: 180px ;margin-right:10px; border-radius: 70px"}
-[Trial]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 90px;"}
-[Population]{style="font-size: 30px; font-weight: bold; color: #ffffff; padding-left: 55px;"}
-:::
-:::
-:::
-::: {.column width="45%"}
+## [Identify the target population]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "}
 
-::: {style="position: absolute; left: 500px; top: 180px; height: 200px; width: 300px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 0px 0px #4a235a; border-radius: 5px; border:0.2px solid #878489"}
-[Variables]{style="font-size: 25px; font-weight: bold; color: #c39bd3; padding-left: 90px;"}
+<br>
+
+![](Shin/diagram.tiff){width="1200" height="600" fig-align="center"}
+
+::: {style="position: absolute; left: 380px; top: 800px; height: 50px; width: 150px; background-color: #ffffff; padding: 20px; padding-left: 10px; box-shadow: 0px 0px 10px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
+[Trial population]{style="font-size: 20px; font-weight: bold; line-height: 0.5px; margin: 0px; color: #4a235a"}
 :::
 
-::: {style="position: absolute; left: 500px; top: 430px; height: 150px; width: 300px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 0px 0px #4a235a; border-radius: 5px; border:0.2px solid #878489"}
-Variables
-:::
-:::
+::: {style="position: absolute; left: 860px; top: 800px; height: 50px; width: 150px; background-color: #ffffff; padding: 20px; padding-left: 10px; box-shadow: 0px 0px 10px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
+[$1^{st}$ Target pop.]{style="font-size: 20px; font-weight: bold; line-height: 0.5px; margin: 0px; color: #4a235a"}
 :::
 
+::: {style="position: absolute; left: 1200px; top: 800px; height: 50px; width: 150px; background-color: #ffffff; padding: 20px; padding-left: 10px; box-shadow: 0px 0px 10px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
+[$2^{nd}$ Target pop.]{style="font-size: 20px; font-weight: bold; line-height: 0.5px; margin: 0px; color: #4a235a"}
+:::
+
+## Identify effect modifiers to be included in the model
 
 
-## dd
+<br>
+
+![](Shin/EM.tiff){width="1200" height="600" fig-align="center"}
+
+## Identify effect modifiers to be included in the model
+
+<br>
+
+![](Shin/table.tiff){width="1000" height="700" fig-align="center"}
+
+
+## Prediction models^[equivalent to counterfactual probabilities of the outcomes had they been exposed to dabigatran or warfarin]
+
+<br>
+
 ```{mermaid}
-%%| fig-width: 3.5
-%%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "5px"}}}%%
-        graph TD
-          A[target population] -->|Get money| B(Go shopping)
-          B --> C{target population}
-          B --> G[/Another/]
-          C ==>|One| D[Laptop]
-          C -->|Two| E[iPhone]
-          C -->|Three| F[fa:fa-car Car]
-          subgraph section
-            C
-            D
-            E
-            F
-            G
-          end
+%%| fig-width: 10
+%%{init: {'themeVariables': { 'primaryColor': '#ff0000',"fontSize": "10px"}}}%%
+        graph LR
+          A[Target population] --> B(Warfarin Model)
+          A[Trial population] --> C(Dabigatran Model)
+          C --> D[Risk Dabigatran]
+          B --> E[Risk Warfarin]
+          D --> F[RD or RR]
+          E --> F
+
 ```
-## It looks like {auto-animate=true auto-animate-easing="ease-in-out"}
 
-<br><br>
+## {}
+![](Shin/table2.tiff){width="1400" height="700" fig-align="center"}
 
-::: {.r-stack}
 
-::: {data-id="box2" style="background: #344c5c; width: 250px; height: 180px; border-radius: 70px;"}
+## [Discussion]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "}
 
-\ 
+<br>
 
-[Target]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 90px;"}
-[Population]{style="font-size: 35px; font-weight: bold; color: #ffffff; padding-left: 65px;"}
+> Populations had different distributions of some covariates
+
+<br>
+
+> RR and RD for Stroke/SE were similar between the target and trial population as CHADS2 score strongly predicted Stroke/SE 
+
+<br>
+
+> RWE (Observed) study might differ in how the outcome was ascertained and also the presence of confounding. [Does this enable us to compare it with the results from the prediction?]{style="font-size: 40px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} 
+
+## Strength of this approach
+
+<br>
+
+> __Outcome model-based prediction__ requires only one-time model development in a trial, and the same model can be used in any target population that overlaps with the trial population. 
+
+<br>
+
+> The models are built from the trial data. Thus, confounding, differences in outcome ascertainment and follow-up are not an issue (typical challenges in observational studies).
+
+## Limitations
+
+<br><br><br><br>
+
+::: {style="position: absolute; left: 10px; top: 140px; height: 120px; width: 1400px; border:0px solid #D9D9D9 ;background-color: #ffffff; padding: 15px; padding-left: 20px; box-shadow: -5px 0px 0px 0px #6C3483; border-radius: 5px;"}
+Avaibablitiy, distribution, and acertaintemnt of the covariates (for both trial and target population)
 :::
 
-::: {data-id="box1" style="background: #c39bd3; width: 250px; height: 180px; border-radius: 70px;"}
-[Re-weighted]{style="font-size: 30px; font-weight: bold; color: #540C72; padding-left: 40px;"}
-[Trial]{style="font-size: 35px; font-weight: bold; color: #540C72; padding-left: 95px;"}
-[Population]{style="font-size: 35px; font-weight: bold; color: #540C72; padding-left: 45px;"}
+ - [e.g., Leave out and relevant effect modifier that higly predict the outcome might understamate the predicted risk]{style="font-size: 30px; color: #808080"}
+ 
+ <br><br><br><br><br>
+ 
+::: {style="position: absolute; left: 10px; top: 500px; height: 120px; width: 1400px; border:0px solid #D9D9D9 ;background-color: #ffffff; padding: 15px; padding-left: 20px; box-shadow: -5px 0px 0px 0px #6C3483; border-radius: 5px;"}
 
+ Those models cannot extrapolate estimates to target populations with characteristics explicitly excluded from the trial. 
+:::
+ - [e.g., RE-LY trial excluded individuals with heart valve disorders or active liver disease which might be associated with the increased risk of stroke or bleeding. Then, apply a developed model to no eligible trial participant model’s performance cannot be guaranteed]{style="font-size: 30px; color: #808080"}
+ 
+ 
+## Advancing to personalised medicine
+
+<br>
+
+> These methods enable us to generalise/transport ATE (ITE) from RCTs to clinical practice settings.
+
+<br>
+
+> They can be used in conjunction with observational studies, including target trial emulation to obtain target population estimates.
+
+<br>
+
+> Outcome-based models show promise in predicting treatment effects in various target populations with different individual characteristics.
+
+
+##  {}
+
+::: {style="position: absolute; left: 180px; top: 200px; height: 525px; width: 1200px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 15px 0px 0px #6C3483; border-radius: 5px;"}
+[Leveraging real-world data and randomised controlled trials to advance personalised medicine]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px"}
+
+<br>
+
+
+[2023]{style="font-size: 50px;font-weight: bold;"}
 :::
 
-:::
 
-
-
-## Traget population - Trial population
-
-::: columns
-::: {.column width="45%"}
-![](14.jpg){width="550" height="450" fig-align="center"}
-:::
-
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="45%"}
-![](13.jpg){width="550" height="450" fig-align="center"}
-**ATE**hdbehbdebdhbehjdbhed
-:::
-:::
