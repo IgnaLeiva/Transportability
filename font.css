@@ -15,3 +15,43 @@ h1, h2, h3 {
 .test h3 {
   text-align: center;
 }
+
+
+
+
+/* Custom styling for personalized callout */
+.custom-callout {
+  background-color: #ffffff;
+  line-height: 20px;
+  font-size: 32px;
+  border: 0.2px solid #ccc;
+  border-left: solid 5px #4a235a;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  /* Additional personalized styles here */
+
+}
+
+.white-callout {
+  background-color: #471337;
+  line-height: 20px;
+  font-size: 32px;
+  border: 0px solid #ccc;
+  border-left: solid 6px #E3C3FA;
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  /* Additional personalized styles here */
+
+}
+
+/* Custom styling for block quotes */
+blockquote {
+  border-left: 2px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  font-style: italic;
+  color: #4a235a;
+}

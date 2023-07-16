@@ -9,10 +9,12 @@ format:
     width: 1600
     footer: ""
     slide-number: c/t
+    css: "font.css"
 knitr: 
   opts_chunk: 
     echo: false
-
+editor_options: 
+  chunk_output_type: console
 ---
 
 ##  {}
@@ -30,12 +32,7 @@ knitr:
 :::
 
 
-## {background-color="#581845"}
 
-<p style="margin:700px;"></p>
-
-[Background]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
-    
 ## [Randomised Controlled Trials]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"}
 
 \
@@ -51,36 +48,90 @@ knitr:
 - Included in clinical guidelines 
 - Used by Health care providers
 
+
+
+## [Target population]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #581845"}
+
+::: {.r-hstack}
+
+
+::: {data-id="box1" auto-animate-delay="0" style="background-image: url('foto.png'); background-size: cover; background-position: contain; width: 650px; height: 500px; margin: 50px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1"  style="background: #ffff ; width: 350px; height: 300px ; margin: 10px;"}
+:::
+:::
+
+
 ## [Trial population]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #581845"}
-::: columns
-::: {.column width="20%"}
+
+
+::: {.r-hstack}
+
+::: {data-id="box1" auto-animate-delay="0" style="background-image: url('foto.png'); background-size: cover; background-position: contain; width: 650px; height: 500px; margin: 50px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background-image: url('foto2.png'); background-size: cover; background-position: contain; width: 350px; height: 300px ; margin: 10px;"}
+:::
+
+:::
+
+
+::: {style="position: absolute; left: 940px; top: 300px; height: 10px; width: 100px; border:0px solid #fffff ;background-color: #ffffff; padding: 5px; box-shadow: 0px 0px 0px 0px #6C3483; border-radius: 5px;"}
+[&rarr;]{style="font-size: 60px;"}
+:::
+
+
+## [Trial population]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #581845"}
+
+::: {style="position: absolute; left: 740px; top: 0px; height: 300px; width: 800px; border:0.2px solid #6C3483 ;background-color: #ffffff; padding: 15px; box-shadow: 0px 0px 0px 0px #6C3483; border-radius: 5px;"}
+::: {.r-hstack}
+
+::: {data-id="box1" auto-animate-delay="0" style="background-image: url('foto.png'); background-size: cover; background-position: contain; width: 350px; height: 250px; margin: 50px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background-image: url('foto2.png'); background-size: cover; background-position: contain; width: 240px; height: 190px ; margin: 10px;"}
+:::
+
+:::
+
+
+::: {style="position: absolute; left: 450px; top: 100px; height: 10px; width: 100px; border:0.2px solid #fffff ;background-color: #ffffff; padding: 15px; padding-left: 20px; box-shadow: 0px 0px 0px 0px #6C3483; border-radius: 5px;"}
+[&rarr;]{style="font-size: 70px;"}
+:::
+
+:::
+
+<br><br><br><br><br><br><br><br>
+
+. . .
+
+::: {.custom-callout}
+
+[Random sample | ]{style="font-size: 35px; font-weight: bold;color: #000000"}
+[ $ATE_{trial\ population} = ATE_{target\ population}$]{style="font-size: 25px; font-weight: bold; color: #000000"}
+
+:::
 
 \ 
 
-::: {style="position: absolute; left: 10px; top: 200px; height: 120px; width: 410px; border:0.2px solid #D9D9D9 ;background-color: #ffffff; padding: 15px; padding-left: 20px; box-shadow: -5px 0px 0px 0px #6C3483; border-radius: 5px;"}
+. . .
 
-[Random sample]{style="font-size: 35px; font-weight: bold;color: #000000"}
-[$ATE_{trial\ population} = ATE_{target\ population}$]{style="font-size: 25px; font-weight: bold; color: #000000"}
-:::
+::: {.custom-callout}
 
+[No random sample | ]{style="font-size: 35px; font-weight: bold;color: #000000"}
+[ $ATE_{trial\ population} \neq ATE_{target\ population}$]{style="font-size: 25px; font-weight: bold; color: #000000"}
 
-
-\ 
-
-::: {style="position: absolute; left: 10px; top: 500px; height: 120px; width: 410px; border:0.2px solid #D9D9D9 ;background-color: #ffffff; padding: 15px; padding-left: 20px; box-shadow: -5px 0px 0px 0px #6C3483; border-radius: 5px;"}
-
-[No random sample]{style="font-size: 35px; font-weight: bold;color: #000000"}
-[$ATE_{trial\ population} \neq ATE_{target\ population}$]{style="font-size: 25px; font-weight: bold; color: #000000"}
+> [Distribution EM: Age, Sex, Renal Function]{style="font-size: 20px; color: #4a235a"}
 
 :::
 
-:::
-::: {.column width="80%"}
 
-![](targetpopulation.jpg){width="80%" height="80%" fig-align="center"}
 
-:::
-:::
+
+
+
+
 
 ## [External &  Internal validity ^[Raymond S. Greenberg, Medical Epidemiology, Third Edition]]{style="font-size: 67px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"}
 
@@ -174,6 +225,7 @@ knitr:
 
 [Transportability]{style="font-size: 35px; font-weight: bold;color: #000000; text-align: center;padding-left: 110px;"}
 
+
 \
 
 ::: {.r-hstack}
@@ -190,7 +242,7 @@ knitr:
 :::
 
 
-## How can we address this issue {auto-animate=true}
+## How can we address External validity {auto-animate=true}
 
 \
 
@@ -210,9 +262,12 @@ knitr:
 ## {background-color="#471337"}
 
 
-<p style="margin:700px;"></p>
+<p style="margin:650px;"></p>
 
 [Generalisability/transportability analyses]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
+
+
+[Remark |  In this talk, we will treat transportability and generalisability as the same problem: extending inferences from trials to target populations of interest]{style="font-size: 30px"}
 
 
 ## [Check the]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} Identifiability conditions 
@@ -262,22 +317,13 @@ knitr:
 
 :::
 
-## How should the _target population_ be selected?
- \
- 
-Based on the research question. 
+## {background-color="#471337"}
 
-However, it might be limited by the available source of target population data  
 
- - _Characteristics of the individuals (especially EM)_ 
- - _How variable measurements were ascertained (compared to RCT)_
+<p style="margin:650px;"></p>
 
-::: {.callout-tip title="Example"}
-## Example
- - Patients need to fulfil inclusion/exclusion criteria*
+[Populations' data]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
 
- - Have measurements of relevant effect modifiers identified
-:::
 
 ## Require patient-data level
 
@@ -293,9 +339,41 @@ However, it might be limited by the available source of target population data
 
 Include as many potential [effect modifiers]{style="font-size: 45px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} as possible
 
-   - matter-knowledge 
-   - subgroups analysis 
+   - Matter-knowledge 
+   - Subgroups analysis 
    - Previous evidence
+
+
+## {}
+ \
+ 
+::: {.callout-warning title="Example"}
+## Limitations
+
+Data availability of target population
+
+__Keep in mind:__
+ 
+ - Information on variables (especially EM)
+ 
+ - Differences in the ascertainment of variables (compared to RCT)
+:::
+
+<br><br>
+
+::: {.callout-tip title="Example"}
+## What look for
+ - Patients need to fulfil inclusion/exclusion criteria*
+
+ - Have measurements of relevant effect modifiers identified
+:::
+
+## {background-color="#471337"}
+
+
+<p style="margin:650px;"></p>
+
+[Type of analyses]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
 
 ## Estimation of _average treatment effect_ in the target population
 
@@ -333,7 +411,7 @@ Trial  population is used to create a [new target population]{style="font-size: 
 :::
 
 ::: {style="position: absolute; left: 1100px; top: 200px; height: 380px; width: 420px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 7px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
-It can be done using Logistic regression or machine learning methods
+It can be done using Logistic regression or machine learning methods. 
 Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; margin: 0px; color: #9B4EBB"} of the weighted trial population in the analysis.
 :::
 
@@ -376,15 +454,10 @@ Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; m
  
 \
 
-. . .
 
-::: {.callout-tip title="Example"}
-## Benefit over IPW estimators
-the model can be applied to a new target population without re-weighting each time
-:::
 ## {}
 
-![](Shin/title.tiff){width="950" height="420" fig-align="center"}
+![](Shin/paper.tiff){width="950" height="380" fig-align="center"}
 
 <br>
 
@@ -420,11 +493,11 @@ To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among p
 
 ![](Shin/EM.tiff){width="1200" height="600" fig-align="center"}
 
-## Identify effect modifiers to be included in the model
+## Populations' characteristics
 
 <br>
 
-![](Shin/table.tiff){width="1000" height="700" fig-align="center"}
+![](Shin/table2.tiff){width="1000" height="700" fig-align="center"}
 
 
 ## Prediction models^[equivalent to counterfactual probabilities of the outcomes had they been exposed to dabigatran or warfarin]
@@ -445,32 +518,53 @@ To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among p
 ```
 
 ## {}
-![](Shin/table2.tiff){width="1400" height="700" fig-align="center"}
+![](Shin/table.tiff){width="1400" height="700" fig-align="center"}
+
+
+
 
 
 ## [Discussion]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "}
 
 <br>
 
-> Populations had different distributions of some covariates
+::: {.custom-callout}
+
+[Populations had different distributions of some covariates]{style="font-size: 35px; font-weight: light; line-height: 1em; margin: 0px; color: #48494B "} 
+ 
+:::
 
 <br>
 
-> RR and RD for Stroke/SE were similar between the target and trial population as CHADS2 score strongly predicted Stroke/SE 
+::: {.custom-callout}
+
+[RR and RD for Stroke were similar between the target and trial population as __CHADS2 score__ strongly predicted Stroke]{style="font-size: 35px; font-weight: light; line-height: 1em; margin: 0px; color: #48494B "}
+
+:::
 
 <br>
 
-> RWE (Observed) study might differ in how the outcome was ascertained and also the presence of confounding. [Does this enable us to compare it with the results from the prediction?]{style="font-size: 40px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} 
+::: {.custom-callout}
 
-## Strength of this approach
+ [RWE (Observed) study might differ in how the outcome was ascertained and also the presence of confounding.]{style="font-size: 35px; font-weight: light; line-height: 1em; margin: 0px; color: #48494B "} [Does this enable us to compare it with the results from the prediction?]{style="font-size: 35px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} 
 
-<br>
+:::
 
-> __Outcome model-based prediction__ requires only one-time model development in a trial, and the same model can be used in any target population that overlaps with the trial population. 
+## Strength of outcome model-based prediction
 
-<br>
 
-> The models are built from the trial data. Thus, confounding, differences in outcome ascertainment and follow-up are not an issue (typical challenges in observational studies).
+::: {style="position: absolute; left: 140px; top: 200px; height: 400px; width: 480px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 10px 0px #fab724; border-radius: 5px; border:0.2px solid #D9D9D9"}
+
+[Only one-time model development in a trial. The same model can be used in any target population that overlaps with the trial population.]{style="font-size: 43px; line-height: 1em; margin: 0px; color: #D69E02"}   
+
+:::
+
+::: {style="position: absolute; left: 800px; top: 200px; height: 400px; width: 480px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 10px 0px #fb92a4; border-radius: 5px; border:0.2px solid #D9D9D9"}
+
+[The models are built from the trial data. Thus, confounding, differences in outcome ascertainment and follow-up are not an issue.]{style="font-size: 43px; line-height: 1em; margin: 0px; color: #B84C65"} [(typical challenges in observational studies)]{style="font-size: 30px; line-height: 1em; margin: 0px; color: #B84C65"}
+:::
+
+
 
 ## Limitations
 
@@ -491,20 +585,32 @@ Avaibablitiy, distribution, and acertaintemnt of the covariates (for both trial 
  - [e.g., RE-LY trial excluded individuals with heart valve disorders or active liver disease which might be associated with the increased risk of stroke or bleeding. Then, apply a developed model to no eligible trial participant model’s performance cannot be guaranteed]{style="font-size: 30px; color: #808080"}
  
  
-## Advancing to personalised medicine
+## Advancing to personalised medicine {background-color="#471337"}
 
 <br>
 
-> These methods enable us to generalise/transport ATE (ITE) from RCTs to clinical practice settings.
+::: {.white-callout}
+
+ [These methods enable us to generalise/transport ATE (ITE) from RCTs to clinical practice settings.]{style="font-size: 42px; color: #ffffff"}
+
+:::
 
 <br>
 
-> They can be used in conjunction with observational studies, including target trial emulation to obtain target population estimates.
+::: {.white-callout}
+
+[They can be used in addition to observational studies, such as target trial emulation to estimate intervention benefit]{style="font-size: 42px; color: #ffffff"}
+
+:::
+
 
 <br>
 
-> Outcome-based models show promise in predicting treatment effects in various target populations with different individual characteristics.
+::: {.white-callout}
 
+[Outcome-based models show promise in predicting treatment effects in various target populations with different individual characteristics.]{style="font-size: 42px; color: #ffffff"}
+
+:::
 
 ##  {}
 
