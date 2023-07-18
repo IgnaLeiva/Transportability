@@ -158,7 +158,7 @@ editor_options:
 
 :::
 
-## External validity can be divided into {auto-animate=true auto-animate-easing="ease-in-out"}
+## External validity can be divided into ^[Dahabreh IJ, Robertson SE, Steingrimsson JA, Stuart EA, Hernan MA. Extending inferences from a randomized trial to a new target population. Stat Med. 2020;39(14):1999-2014.]  {auto-animate=true auto-animate-easing="ease-in-out"}
 
 ::: {style="position: absolute; left: 180px; top: 200px; height: 370px; width: 600px; border:0px solid #D9D9D9 ;background-color: #ffffff; padding: 0px; padding-right: 0px; box-shadow: 0px 0px 0px 0px #c39bd3; border-radius: 5px;"}
 
@@ -270,7 +270,7 @@ editor_options:
 [Remark |  In this talk, we will treat transportability and generalisability as the same problem: extending inferences from trials to target populations of interest]{style="font-size: 30px"}
 
 
-## [Check the]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} Identifiability conditions 
+## [Check the]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "} Identifiability conditions ^[Degtiar I, Rose S. A Review of Generalizability and Transportability. Annual Review of Statistics and Its Application. 2023;10(1):501-24]
 
 ::: {style="position: absolute; left: 330px; top: 150px; height: 250px; width: 1100px; background-color: #ffffff; padding: 20px; padding-left: 50px; box-shadow: 0px 0px 7px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
 
@@ -325,7 +325,7 @@ editor_options:
 [Populations' data]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
 
 
-## Require patient-data level
+## Require patient-data level^[Dahabreh IJ, Robertson SE, Steingrimsson JA, Stuart EA, Hernan MA. Extending inferences from a randomized trial to a new target population. Stat Med. 2020;39(14):1999-2014.]
 
 \ 
  
@@ -375,18 +375,16 @@ __Keep in mind:__
 
 [Type of analyses]{style="font-size: 70px; font-weight: bold; line-height: 1em; margin: 0px; color: #ffffff"}
 
-## Estimation of _average treatment effect_ in the target population
+## Estimation of _average treatment effect_ in the target population ^[Dahabreh IJ, Robertson SE, Tchetgen EJ, Stuart EA, Hernán MA. Generalizing causal inferences from individuals in randomized trials to all trial-eligible individuals. Biometrics. 2019;75(2):685-94]
 
 \
 
 > [Inverse probability (IP) weighting]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} estimators that rely on modelling the probability of  participation in the trial
-
 \
 
 . . .
 
 > [Outcome model-based]{style="font-size: 50px; font-weight: bold; line-height: 1em; margin: 0px; color: #6C3483"} estimators that rely on modelling the expectation of the outcome
-
 \ 
 
 . . .
@@ -485,6 +483,7 @@ To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among p
 ::: {style="position: absolute; left: 1200px; top: 800px; height: 50px; width: 150px; background-color: #ffffff; padding: 20px; padding-left: 10px; box-shadow: 0px 0px 10px 0px #4a235a; border-radius: 5px; border:0.2px solid #D9D9D9"}
 [$2^{nd}$ Target pop.]{style="font-size: 20px; font-weight: bold; line-height: 0.5px; margin: 0px; color: #4a235a"}
 :::
+
 
 ## Identify effect modifiers to be included in the model
 
@@ -611,6 +610,23 @@ Avaibablitiy, distribution, and acertaintemnt of the covariates (for both trial 
 [Outcome-based models show promise in predicting treatment effects in various target populations with different individual characteristics.]{style="font-size: 42px; color: #ffffff"}
 
 :::
+
+##  References
+
+ - 	[Dahabreh IJ, Robertson SE, Steingrimsson JA, Stuart EA, Hernan MA. Extending inferences from a randomized trial to a new target population. Stat Med. 2020;39(14):1999-2014.]{style="font-size: 25px; line-height: 1em; margin: 0px"}
+ 
+ - 	[Degtiar I, Rose S. A Review of Generalizability and Transportability. Annual Review of Statistics and Its Application. 2023;10(1):501-24.]{style="font-size: 25px; line-height: 1em; margin: 0px"}
+ 
+ - 	[Robertson SE, Steingrimsson JA, Joyce NR, Stuart EA, Dahabreh IJ. Estimating subgroup effects in generalizability and transportability analyses. Am J Epidemiol. 2022.]{style="font-size: 25px; line-height: 1em; margin: 0px"}
+ 
+ - 	[Dahabreh IJ, Robertson SE, Tchetgen EJ, Stuart EA, Hernán MA. Generalizing causal inferences from individuals in randomized trials to all trial-eligible individuals. Biometrics. 2019;75(2):685-94.]{style="font-size: 25px; line-height: 1em; margin: 0px"}
+ 
+ - 	[Lesko CR, Buchanan AL, Westreich D, Edwards JK, Hudgens MG, Cole SR. Generalizing Study Results: A Potential Outcomes Perspective. Epidemiology. 2017;28(4):553-61.]{style="font-size: 25px; line-height: 1em; margin: 0px"}
+ 
+ - 	[Ling AY, Montez-Rath ME, Carita P, Chandross KJ, Lucats L, Meng Z, et al. An Overview of Current Methods for Real-World Applications to Generalize or Transport Clinical Trial Findings to Target Populations of Interest. Epidemiology. 2023.]{style="font-size: 25px; ; line-height: 1em; margin: 0px"}
+ 
+ - 	[Lee D, Yang S, Dong L, Wang X, Zeng D, Cai J. Improving trial generalizability using observational studies. Biometrics. 2023;79(2):1213-25.]{style="font-size: 25px; line-height: 1em; margin: 0px"}
+
 
 ##  {}
 
