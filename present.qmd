@@ -465,7 +465,7 @@ Use the [outcome]{style="font-size: 40px; font-weight: bold; line-height: 1em; m
 
 ## Aim
 
-To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among patient patients with atrial Fibrillation in US Medicare beneficiaries 
+To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among patient with atrial Fibrillation in US Medicare beneficiaries 
 :::
 
 ## [Identify the target population]{style="font-size: 67px; font-weight: light; line-height: 1em; margin: 0px; color: #6C3483 "}
@@ -530,7 +530,7 @@ To predict the ATE of dabigatran vs warfarin on stroke/systemic embolism among p
 
 ::: {.custom-callout}
 
-[Populations had different distributions of some covariates]{style="font-size: 35px; font-weight: light; line-height: 1em; margin: 0px; color: #48494B "} 
+[Populations had different distributions of some covariates and missing measured variables in target population]{style="font-size: 35px; font-weight: light; line-height: 1em; margin: 0px; color: #48494B "} 
  
 :::
 
